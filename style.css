@@ -1,0 +1,18 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(16, auto);
+    border: 1px solid black;
+    height: 900px;
+    width: 900px;
+
+}
+
+.grid-item:hover {
+    border: 1px solid;
+    background-color: rgba(158, 157, 157, 0.986);
+}
+
+.play-button {
+    margin-bottom: 25px;
+}
