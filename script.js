@@ -7,9 +7,21 @@ const btnContainer = document.createElement('div');{
 
 const sizeBtn = document.createElement("button"); {
     sizeBtn.className = "size-button";
-    sizeBtn.innerText = "Enter Grid Size";
+    sizeBtn.innerText = "Click to Play";
     btnContainer.appendChild(sizeBtn);
 }
+
+const resetBtn = document.createElement("button"); {
+    resetBtn.className = "reset-button";
+    resetBtn.innerText = "Reset Game";
+    btnContainer.appendChild(resetBtn);
+}
+
+// reset 
+
+resetBtn.addEventListener('click', () => {
+    location.reload()
+})
 
 // create  div container
 
@@ -25,11 +37,12 @@ sizeBtn.addEventListener("click", getPlayerSelection)
 // function for button click to generate new grids
 
 function getPlayerSelection() {
-    let playerInput = prompt("Choose a number between 5 and 50 to set the amount of squares you would like per side");
+    let playerInput = prompt("Choose a number between 10 and 50 to determine the size of the board");
     let playerNumber = parseInt(playerInput);
-    while (playerNumber < 2 || playerNumber > 50) {
-        prompt("Choose a number between 2 and 50 to set the amount of squares you would like per side")
-        if (playerNumber > 1 || playerNumber < 51) {
+    while (playerNumber < 10 || playerNumber > 50) {
+        playerInput = prompt("Choose a number between 10 and 50 to determine the size of the board")
+        playerNumber = parseInt(playerInput);
+        if (playerNumber > 10 || playerNumber < 51) {
             break
         }    
     }
