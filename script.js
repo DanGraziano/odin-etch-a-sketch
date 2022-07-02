@@ -42,7 +42,7 @@ function getPlayerSelection() {
     while (playerNumber < 10 || playerNumber > 65) {
         playerInput = prompt("Choose a number between 10 and 65 to determine the size of the board")
         playerNumber = parseInt(playerInput);
-        if (playerNumber > 10 || playerNumber < 66) {
+        if (playerNumber > 10 && playerNumber < 66) {
             break
         }    
     }
